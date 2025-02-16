@@ -15,11 +15,19 @@ function agregarAmigo() {
     // si el campo no está vacío , agrego el nombre al array nombreAmigos
     else {
         
+       // if (nombreAmigos.includes(nAmigo)) {
+            
+       //     alert("Nombre ya ingresado, prueba con otro")
+       //     limpiarCaja();
+       //     }
+        //else {
         nombreAmigos.push(nAmigo);
         console.log(nombreAmigos);
         limpiarCaja();
-        asignarTextoElemento('listaAmigos',nAmigo);
-
+        for (let i = 0; i < nombreAmigos.length; i++)
+        asignarTextoElemento('listaAmigos',nombreAmigos[i]);
+    //console.log(nombreAmigos[i]);
+        //    }
     }
 }
 
@@ -32,11 +40,26 @@ function limpiarCaja() {
 // <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar 
 // nuevos elementos.
 
-function asignarTextoElemento(elemento,texto) {  
+function asignarTextoElemento(listaA,nombre) {  
 
-    let elementoHTML = document.getElementById(elemento);
-    elementoHTML.innerHTML = texto;
-    return;
+    //let lista = document.getElementById(listaA);
+    //lista.innerHTML = nombre;
+    //console.log(nombreAmigos);
+   
+        let ulNuevo = document.createElement("ul");
+        let nombreT = document.createTextNode(nombre);
+        ulNuevo.appendChild(nombreT);
+       
+       let ulActual = document.getElementById(listaA);
+       document.body.insertBefore(ulNuevo, ulActual);    
+  /*  if (nombreAmigos.includes(nombre)) {
+        return lista.innerHTML = "";
+    } else {
+        return lista.innerHTML = nombre;
+    }
+   
+*/
+    
 
 }
 
