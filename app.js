@@ -47,11 +47,10 @@ function asignarTextoElemento(listaA,nombre) {
     //console.log(nombreAmigos);
    
         let ulNuevo = document.createElement("ul");
-        let nombreT = document.createTextNode(nombre);
-        ulNuevo.appendChild(nombreT);
+        ulNuevo.innerHTML = nombre;
+        document.body.appendChild(ulNuevo);
        
-       let ulActual = document.getElementById(listaA);
-       document.body.insertBefore(ulNuevo, ulActual);    
+      
   /*  if (nombreAmigos.includes(nombre)) {
         return lista.innerHTML = "";
     } else {
