@@ -33,7 +33,11 @@ function agregarAmigo() {
     }
 }
 
-// función actualizar lista
+
+//Crea una función que recorra el array amigos y agregue cada nombre como un elemento 
+// <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar 
+// nuevos elementos.
+
 function actualizarLista() {
 
 // Obtener el elemento de la lista
@@ -56,23 +60,23 @@ function limpiarCaja() {
     document.getElementById('amigo').value='';
 }
 
-//Crea una función que recorra el array amigos y agregue cada nombre como un elemento 
-// <li> dentro de una lista HTML. Usa innerHTML para limpiar la lista antes de agregar 
-// nuevos elementos.
+//funcion para sortear amigos
 
-function asignarTextoElemento(listaA,nombre) {  
-
-    //let lista = document.getElementById(listaA);
-    //lista.innerHTML = nombre;
-    //console.log(nombreAmigos);
-   
-        const ulNuevo = document.createElement("ul");
-        ulNuevo.innerHTML = nombre;
-        document.body.appendChild(ulNuevo);
-       
-
+function sortearAmigo() {
     
+    if (nombreAmigos.length === 0) {
+        alert("Por favor, inserte un nombre");   
+    
+    }
+
+    else {
+        let indiceNombreAmigo = Math.floor(Math.random()*nombreAmigos.length);
+        console.log(indiceNombreAmigo);
+        //console.log(nombreAmigos.length);
+        console.log(nombreAmigos[indiceNombreAmigo]);
+        let amigoSecreto = document.getElementById('resultado');
+        amigoSecreto.innerHTML= nombreAmigos[indiceNombreAmigo];
+
+    }
 
 }
-
-//asignarTextoElemento('p','Numero secreto es menor');
