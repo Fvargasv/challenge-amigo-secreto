@@ -24,12 +24,32 @@ function agregarAmigo() {
         nombreAmigos.push(nAmigo);
         console.log(nombreAmigos);
         limpiarCaja();
-        for (let i = 0; i < nombreAmigos.length; i++)
-        asignarTextoElemento('listaAmigos',nombreAmigos[i]);
+        actualizarLista();
+
+       // for (let i = 0; i < nombreAmigos.length; i++)
+      //  asignarTextoElemento('listaAmigos',nombreAmigos[i]);
     //console.log(nombreAmigos[i]);
         //    }
     }
 }
+
+// función actualizar lista
+function actualizarLista() {
+
+// Obtener el elemento de la lista
+    const lista = document.getElementById("listaAmigos") //|| document.createElement("ul"); 
+    //lista.id = "listaAmigos";
+  //  document.body.appendChild(lista);
+    lista.innerHTML = ""; // Limpiar la lista antes de agregar nuevos elementos.
+    
+    for (let i = 0; i < nombreAmigos.length; i++) {
+        const elemento = document.createElement("li"); // Crear un <li>
+        elemento.textContent = nombreAmigos[i]; // Asignar el nombre del amigo
+        lista.appendChild(elemento); // Agregar el <li> a la lista
+    }
+}
+
+
 
 //función para limpiar la caja para ingresar amigos
 function limpiarCaja() {
@@ -46,18 +66,11 @@ function asignarTextoElemento(listaA,nombre) {
     //lista.innerHTML = nombre;
     //console.log(nombreAmigos);
    
-        let ulNuevo = document.createElement("ul");
+        const ulNuevo = document.createElement("ul");
         ulNuevo.innerHTML = nombre;
         document.body.appendChild(ulNuevo);
        
-      
-  /*  if (nombreAmigos.includes(nombre)) {
-        return lista.innerHTML = "";
-    } else {
-        return lista.innerHTML = nombre;
-    }
-   
-*/
+
     
 
 }
