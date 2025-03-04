@@ -19,4 +19,4 @@ El usuario deberá agregar nombres mediante un campo de texto y un botón "Adici
 
 ## 📁 Acceso al proyecto
 
-**[Challenge amigo secreto ](http://127.0.0.1:5500/index.html)**
+**[Challenge amigo secreto ](https://fvargasv.github.io/challenge-amigo-secreto/)**
