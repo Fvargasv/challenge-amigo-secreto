@@ -14,22 +14,12 @@ function agregarAmigo() {
     }
     // si el campo no está vacío , agrego el nombre al array nombreAmigos
     else {
-        
-       // if (nombreAmigos.includes(nAmigo)) {
-            
-       //     alert("Nombre ya ingresado, prueba con otro")
-       //     limpiarCaja();
-       //     }
-        //else {
+           
         nombreAmigos.push(nAmigo);
         console.log(nombreAmigos);
         limpiarCaja();
         actualizarLista();
 
-       // for (let i = 0; i < nombreAmigos.length; i++)
-      //  asignarTextoElemento('listaAmigos',nombreAmigos[i]);
-    //console.log(nombreAmigos[i]);
-        //    }
     }
 }
 
@@ -41,9 +31,7 @@ function agregarAmigo() {
 function actualizarLista() {
 
 // Obtener el elemento de la lista
-    const lista = document.getElementById("listaAmigos") //|| document.createElement("ul"); 
-    //lista.id = "listaAmigos";
-  //  document.body.appendChild(lista);
+    const lista = document.getElementById("listaAmigos");
     lista.innerHTML = ""; // Limpiar la lista antes de agregar nuevos elementos.
     
     for (let i = 0; i < nombreAmigos.length; i++) {
