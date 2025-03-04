@@ -19,4 +19,4 @@ El usuario deberá agregar nombres mediante un campo de texto y un botón "Adici
 
 ## 📁 Acceso al proyecto
 
-**Indica cómo se puede descargar o acceder al código fuente del proyecto, ya sea proyecto inicial o final**
+**[Challenge amigo secreto ](http://127.0.0.1:5500/index.html)**
