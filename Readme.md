@@ -17,6 +17,6 @@ El usuario deberá agregar nombres mediante un campo de texto y un botón "Adici
 - `Funcionalidad 3`: Visualizar la lista: Los nombres ingresados aparecerán en una lista debajo del campo de entrada.
 - `Funcionalidad 4`: Sorteo aleatorio: Al hacer clic en el botón "Sortear Amigo", se seleccionará aleatoriamente un nombre de la lista y se mostrará en la página.
 
-## 📁 Acceso al proyecto
+## 📁 Acceso al Juego
 
 **[Challenge amigo secreto ](https://fvargasv.github.io/challenge-amigo-secreto/)**
